@@ -5,10 +5,10 @@ const { startServer, stopServer }  = require('../src/server');
 
 const PORT = 4000;
 
-const apiURL = `localhost:${PORT}`
+const apiURL = `localhost:${PORT}`;
 
 beforeAll(() => startServer(PORT));
-afterAll(stopServer)
+afterAll(stopServer);
 
 describe('Server testing', () => {
   test('404 get to bad path', () => {
@@ -21,12 +21,12 @@ describe('Server testing', () => {
   });
   
   it('should ping pong', async () => {
-    const response = await superagent.get(`${apiURL}/ping`)
+    const response = await superagent.get(`${apiURL}/ping`);
     expect(response.text).toBe('pong');
   });
 
   it('should return hello', async () => {
-    const response = await superagent.get(`${apiURL}/`)
+    const response = await superagent.get(`${apiURL}/`);
     expect(response.text).toBe('hello');
   });
 

@@ -4,7 +4,8 @@
   "description": "![CF](http://i.imgur.com/7v5ASc8.png) WARMUP - TOPIC ====================================================",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,8 @@
     "express": "^4.16.4",
     "jest": "^23.6.0",
     "superagent": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.11.1"
   }
 }
